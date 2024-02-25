@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ Route::get('/', function () {
 Route::prefix('auth')->group(function() {
     Route::post('login', LoginController::class);
     //Route::post('register', 'Auth\RegisterController');
-    //Route::post('logout', 'Auth\LogoutController');
+    Route::post('logout', LogoutController::class);
     //Route::post('password/email', 'Auth\ForgotPasswordController');
     //Route::post('password/reset', 'Auth\ResetPasswordController');
     //Route::post('email/verify', 'Auth\VerificationController');
